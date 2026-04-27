@@ -30,6 +30,6 @@ A clean, dark-themed personal portfolio showcasing my experience as a web develo
 
 <div align="center">
 
-Made with 🩷 in Reykjavík
+Made with 🩷 by Daniela
 
 </div>
