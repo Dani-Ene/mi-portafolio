@@ -1,104 +1,338 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
-    <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="style/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniela Elena Ene — Portfolio</title>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css" />
 </head>
 
 <body>
-    <div class="sideNav">
-        <img src="images/logo-daniela.png" alt="Logo de Daniela" class="logo-imagen">
-        <h2 id="nombre">Daniela Elena Ene</h2>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <img src="images/logo-daniela.png" alt="Daniela Elena Ene" class="sidebar-logo">
+        <p class="sidebar-name">Daniela Elena Ene</p>
+        <p class="sidebar-role" data-i18n="role">Web Developer</p>
         <nav>
-            <ul class="navList">
-                <li><a href="#about">Sobre mi</a></li>
-                <li><a href="#education">Educación</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#languages">Idiomas</a></li>
-                <li><a href="#contact">Contacto</a></li>
-                <li><a href="https://github.com/Dani-Ene" target="_blank">Github</a></li>
+            <ul>
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+                <li><a href="#education" data-i18n="nav_education">Education</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#languages" data-i18n="nav_languages">Languages</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                <li><a href="https://github.com/Dani-Ene" target="_blank">GitHub ↗</a></li>
             </ul>
         </nav>
-    </div>
+        <div class="lang-toggle">
+            <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+            <button class="lang-btn" onclick="setLang('es')" id="btn-es">ES</button>
+        </div>
+    </aside>
 
-    <div class="mainContent">
+    <!-- MAIN -->
+    <main class="main">
 
-        <header>
-            <h2>Bienvenido a mi Portafolio</h2>
-        </header>
-
-        <section id="about" class="referencia">
-            <h2>Sobre mi</h2>
-            <p>Soy una persona resolutiva, carismática y con mucha facilidad para aprender y adaptarme rápido a mi
-                entorno de trabajo. Soy detallista y me gusta terminar mis tareas sin errores en el menor tiempo
-                posible. Me encanta aprender continuamente y superarme a mí misma.</p>
-
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <p class="hero-tag" data-i18n="hero_tag">Web Developer · DAW Student · Erasmus+ 🇮🇸</p>
+            <h1 class="hero-name">Daniela<br><em>Elena Ene</em></h1>
+            <p class="hero-bio" data-i18n="hero_bio">
+                Web developer and DAW student from Spain, currently on an Erasmus+ internship in Reykjavík, Iceland —
+                managing and developing two WordPress production websites for the Reykjavík International Film Festival.
+            </p>
+            <div class="hero-links">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero_cta">Get in touch</a>
+                <a href="https://github.com/Dani-Ene" target="_blank" class="btn btn-outline">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/daniela-elena-ene-55a073178/" target="_blank"
+                    class="btn btn-outline">LinkedIn ↗</a>
+            </div>
         </section>
 
-
-
-        <section id="education" class="referencia">
-            <h2>Educación</h2>
-            <ul>
-                <li>
-                    <h3>Grado Superior Desarrollo de Aplicaciones Web</h3>
-                    <p>IES ALONSO DE AVELLANEDA, 2025 - ACTUALIDAD</p>
-                </li>
-                <li>
-                    <h3>Grado Medio Gestión Administrativa</h3>
-                    <p>IES ALONSO DE AVELLANEDA, 2019 - 2021</p>
-                </li>
-            </ul>
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <p class="section-label" data-i18n="about_label">Who I am</p>
+            <h2 class="section-title" data-i18n="about_title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p data-i18n="about_p1">I'm a detail-oriented and fast-learning web developer who thrives in dynamic
+                        environments. I adapt quickly, enjoy solving complex problems, and care deeply about the quality
+                        of my work.</p>
+                    <p data-i18n="about_p2">Currently doing an Erasmus+ internship at the Reykjavík International Film
+                        Festival (RIFF) in Iceland, where I manage two live WordPress sites — handling everything from
+                        Elementor Pro and custom CSS/JS to plugin management, SEO, and branding.</p>
+                    <p data-i18n="about_p3">I also have a background in administration, having worked at Onda Cero and
+                        Europa FM radio stations in Spain — which gives me a unique mix of technical and organizational
+                        skills.</p>
+                </div>
+                <div class="about-details">
+                    <div class="detail-item">
+                        <span class="detail-label" data-i18n="detail_location_label">Currently</span>
+                        <span class="detail-value" data-i18n="detail_location">Reykjavík, Iceland 🇮🇸</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label" data-i18n="detail_study_label">Studying</span>
+                        <span class="detail-value">DAW · IES Alonso de Avellaneda</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label" data-i18n="detail_open_label">Status</span>
+                        <span class="detail-value" data-i18n="detail_open">Open to opportunities</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label" data-i18n="detail_base_label">Based in</span>
+                        <span class="detail-value">Alcalá de Henares, Spain 🇪🇸</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="experience" class="referencia">
-            <h2>Experiencia</h2>
-            <ul>
-                <li>
-                    <h3>Técnico Administrativa en Onda Cero</h3>
-                    <p>Gestión de publicidad, facturación, gestión de caja, suministros y atención a clientes.</p>
-                </li>
-                <li>
-                    <h3>Prácticas en Mercedes Benz como Auxiliar Administrativa</h3>
-                    <p>Archivo, digitalización de documentos y gestión de bases de datos.</p>
-                </li>
-            </ul>
-        </section>
-        
-        <section id="skills" class="referencia">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Desarrollo de aplicaciones web</li>
-                <li>Trabajo en equipo y colaboración</li>
-            </ul>
-        </section>
-        <section id="languages" class="referencia">
-            <h2>Idiomas</h2>
-            <ul>
-                <li>Español (nativo)</li>
-                <li>Inglés (intermedio)</li>
-                <li>Francés (intermedio)</li>
-            </ul>
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience">
+            <p class="section-label" data-i18n="exp_label">What I've done</p>
+            <h2 class="section-title" data-i18n="exp_title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">2025 — <span data-i18n="present">Present</span></span>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title" data-i18n="exp1_title">WordPress Developer · Erasmus+</h3>
+                        <p class="timeline-org">Reykjavík International Film Festival — riff.is & ungriff.is</p>
+                        <p class="timeline-desc" data-i18n="exp1_desc">Managing and developing two production WordPress
+                            websites using Elementor Pro, custom CSS/JS, plugin ecosystems, SEO, performance
+                            optimization and branding. Built scroll-based timelines, WooCommerce customizations, popup
+                            integrations and security hardening.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2022 — <span data-i18n="present">Present</span></span>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title" data-i18n="exp2_title">Administrative Technician</h3>
+                        <p class="timeline-org">Onda Cero & Europa FM · Spain</p>
+                        <p class="timeline-desc" data-i18n="exp2_desc">Advertising management, billing, cash management,
+                            supplies and customer service at two major Spanish radio stations.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2021</span>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title" data-i18n="exp3_title">Administrative Assistant · Internship</h3>
+                        <p class="timeline-org">Mercedes-Benz · Spain</p>
+                        <p class="timeline-desc" data-i18n="exp3_desc">Document archiving, digitization and database
+                            management.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="contact" class="referencia">
-            <h2>Contacto</h2>
-            <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo a: <a
-                    href="mailto:danielaelenaene.08@gmail.com">danielaelenaene.08@gmail.com</a></p>
+        <!-- EDUCATION -->
+        <section class="section" id="education">
+            <p class="section-label" data-i18n="edu_label">Where I learned</p>
+            <h2 class="section-title" data-i18n="edu_title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">2024 — <span data-i18n="present">Present</span></span>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title" data-i18n="edu1_title">Higher Degree in Web Application Development
+                        </h3>
+                        <p class="timeline-org">IES Alonso de Avellaneda · Alcalá de Henares</p>
+                        <p class="timeline-desc" data-i18n="edu1_desc">Full-stack web development: React, Angular, Java
+                            Spring Boot, Node.js, databases, cloud deployment and Erasmus+ mobility program.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2019 — 2021</span>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title" data-i18n="edu2_title">Mid-level Degree in Administrative Management
+                        </h3>
+                        <p class="timeline-org">IES Alonso de Avellaneda · Alcalá de Henares</p>
+                        <p class="timeline-desc" data-i18n="edu2_desc">Business administration, accounting, office
+                            management and organizational processes.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <p class="section-label" data-i18n="skills_label">What I work with</p>
+            <h2 class="section-title" data-i18n="skills_title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Angular</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">Bootstrap</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Backend & DB</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Jakarta EE</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>CMS & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="tag">WordPress</span>
+                        <span class="tag">Elementor Pro</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">Jira</span>
+                        <span class="tag">Apache</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <p class="section-label" data-i18n="proj_label">What I've built</p>
+            <h2 class="section-title" data-i18n="proj_title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div>
+                        <p class="project-type" data-i18n="proj1_type">Erasmus+ · Live Production</p>
+                        <h3 class="project-name">RIFF & UngRIFF</h3>
+                        <p class="project-desc" data-i18n="proj1_desc">Two live WordPress websites for the Reykjavík
+                            International Film Festival — managed during my Erasmus+ internship in Iceland. Custom
+                            CSS/JS, Elementor Pro, WooCommerce, plugin management, SEO and performance optimization.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Elementor Pro</span>
+                            <span class="tag">CSS/JS</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="project-links" style="margin-bottom:1rem">
+                            <a href="https://riff.is" target="_blank" class="project-link">riff.is ↗</a>
+                            <a href="https://ungriff.is" target="_blank" class="project-link">ungriff.is ↗</a>
+                        </div>
+                        <p class="project-desc" data-i18n="proj1_highlights">Highlights: scroll-based animated timeline,
+                            custom puffin cursor, WooCommerce product page customization, Issuu flipbook popup
+                            integration, brute force protection, LiteSpeed cache setup.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <p class="project-type" data-i18n="proj2_type">TFG · Full-Stack App</p>
+                    <h3 class="project-name">ZenTrip</h3>
+                    <p class="project-desc" data-i18n="proj2_desc">Travel planner web app with React + Node.js +
+                        Tailwind CSS and Firebase authentication. Features trip planning, weather integration and points
+                        of interest.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ZenTrip-DAW/ZenTrip" target="_blank" class="project-link">GitHub
+                            ↗</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <p class="project-type" data-i18n="proj3_type">Academic · Java</p>
+                    <h3 class="project-name">FoodExpress MVC</h3>
+                    <p class="project-desc" data-i18n="proj3_desc">Web application in Java with Spring Boot MVC
+                        architecture and custom API integration.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">Jakarta EE</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Dani-Ene/FoodExpressMCV-API" target="_blank"
+                            class="project-link">GitHub ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section class="section" id="languages">
+            <p class="section-label" data-i18n="lang_label">How I communicate</p>
+            <h2 class="section-title" data-i18n="lang_title">Languages</h2>
+            <div class="languages-grid">
+                <div class="language-card">
+                    <p class="language-name">Español</p>
+                    <p class="language-level" data-i18n="native">Native</p>
+                </div>
+                <div class="language-card">
+                    <p class="language-name">Română</p>
+                    <p class="language-level" data-i18n="native">Native</p>
+                </div>
+                <div class="language-card">
+                    <p class="language-name">English</p>
+                    <p class="language-level">B2</p>
+                </div>
+                <div class="language-card">
+                    <p class="language-name">Français</p>
+                    <p class="language-level">B1 / B2</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <p class="section-label" data-i18n="contact_label">Let's talk</p>
+            <h2 class="section-title" data-i18n="contact_title">Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-text">
+                    <p data-i18n="contact_text">I'm always open to new opportunities, collaborations or just a good
+                        conversation about web development. Feel free to reach out!</p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:danielaelena.08@gmail.com" class="contact-link">
+                        <div>
+                            <span class="contact-link-label">Email</span>
+                            danielaelena.08@gmail.com
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/daniela-elena-ene-55a073178/" target="_blank"
+                        class="contact-link">
+                        <div>
+                            <span class="contact-link-label">LinkedIn</span>
+                            daniela-elena-ene
+                        </div>
+                    </a>
+                    <a href="https://github.com/Dani-Ene" target="_blank" class="contact-link">
+                        <div>
+                            <span class="contact-link-label">GitHub</span>
+                            Dani-Ene
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <footer>
-        <p>&copy; 2025 Daniela Elena Ene. Todos los derechos reservados.</p>
+        <p>© 2026 Daniela Elena Ene</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 
 </html>
