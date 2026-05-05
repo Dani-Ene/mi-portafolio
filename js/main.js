@@ -1,4 +1,3 @@
-// ── i18n ──
 const translations = {
     en: {
         role: "Web Developer",
@@ -98,7 +97,6 @@ function setLang(lang) {
     document.documentElement.lang = lang;
 }
 
-// ── Active nav on scroll ──
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.sidebar nav a');
 
@@ -114,7 +112,6 @@ const navObserver = new IntersectionObserver(entries => {
 
 sections.forEach(s => navObserver.observe(s));
 
-// ── Scroll reveal ──
 const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
